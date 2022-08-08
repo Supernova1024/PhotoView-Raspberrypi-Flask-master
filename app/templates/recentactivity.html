@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Control Panel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container recent_div">
+	<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;">
+  	<div class="heading">Recent Activity</div>
+  	{% if dates %}
+  	<form action="/delete_activities/" method="post" style="margin:0px">
+  		<button style="float:right;margin-bottom:10px" class="submit" type="submit">Reset All</button>
+  	</form>
+  	{% endif %}
+  	{% if not dates %}
+	<div class="message">There is no record</div>
+  	{% else %}
+  	{% for date in dates %}
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>{{ date }}</th>
+				{% for zone in timezones %}
+				<th>{{ zone }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for animal in animals %}
+			<tr>
+				<td>{{ animal }}</td>
+				{% for timezone in timezones %}
+				<td>{{ message[date][animal][timezone] }}</td>
+				{% endfor%}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+  	{% endfor %}
+  	{% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>		
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>		
+		<form action="/mode/" method="post">
+			<button class="button" name="mode" type="submit">Machine Mode</button>
+		</form>
+		<form action="/species/" method="post">
+			<button class="button" name="species" type="submit">Select Your Species</button>
+		</form>		
+		<form action="/name/" method="post">
+			<button class="button" name="name" type="submit">Machine Name</button>
+		</form>
+		<form action="/timer/" method="post">
+			<button class="button" name="timer" type="submit">Timer</button>
+		</form>
+		<form action="/ftime/" method="post">
+			<button class="button" name="ftime" type="submit">Feed Time Settings</button>
+		</form>
+		<form action="/images/" method="post">
+			<button class="button" name="images" type="submit">View Your Images</button>
+		</form>
+		<form action="/imgdelete/" method="post">
+			<button class="button" name="imgdelete" type="submit">Delete All Images</button>
+		</form>
+		<form action="/restore/" method="post">
+			<button class="button" name="restore" type="submit">Factory Reset</button>
+		</form>
+		<form action="/activity/" method="post">
+			<button class="button" name="activity" type="submit">Recent Activity</button>
+		</form>
+	</body>
+</html>

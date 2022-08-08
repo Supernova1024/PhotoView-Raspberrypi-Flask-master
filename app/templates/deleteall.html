@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>		
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>	
+		<form action="/deleteall/" method="post">
+    		<button class="button" name="deleteall" type="submit">Delete All Photos</button>
+		</form>
+		<form action="/canceldelete/" method="post">
+    		<button class="button" name="canceldelete" type="submit">Cancel Delete</button>
+		</form>
+
+	
+	</body>
+</html>

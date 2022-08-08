@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <ul class=entries>
+  {% if up %}
+    <li><h2><a href='{{ up }}'>..</a></h2></li>
+  {% endif %}
+
+  </ul>
+  <br>
+  <ul class=entries>
+  {% for entry in image_entries %}
+    <a href='{{ path }}/{{ entry }}'>
+      <img src="{{ url_for('download_file', filename='dogs.jpg') }}" style="width:200px;height:78px;">
+    </a>
+  {% else %}
+    <em>No image files</em>
+  {% endfor %}
+  </ul>
+
+{% endblock %}

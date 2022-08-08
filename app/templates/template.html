@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>		
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>	
+		<form action="/demomode/" method="post">
+    		<button class="button" name="demomode" type="submit">Demo Mode</button>
+		</form>
+		<form action="/standardmode/" method="post">
+    		<button class="button" name="standardmode" type="submit">Standard Mode</button>
+		</form>
+
+	
+	</body>
+</html>

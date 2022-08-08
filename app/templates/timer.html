@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>
+		<br/>
+		<form action="/define_timer/" method="POST" id="form3" style="text-align: -webkit-center">
+			<input type="number" name="timer" placeholder="Number of minutes" value="5"/>
+			<br/>
+			<button class="submit" type="submit" form="form3" value="Submit">Submit</button>
+		</form>
+	</body>
+</html>

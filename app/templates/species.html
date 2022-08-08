@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>
+		<br>
+		<form action="/define_feeds/" method="POST" id="form1" style="text-align: -webkit-center">
+			<div>
+				Species that you wish for the machine to feed
+			</div>
+			<div class = "styled-select green rounded">
+				<select name="feed" id="myselect" multiple="multiple" size="3">
+					<option value="Whitetail Deer">Whitetail Deer</option>
+					<option value="Hogs">Hogs</option>
+					<option value="Aoudad">Aoudad</option>
+				</select>
+			</div>
+			<div>
+				Species that wish the machine to never feed
+			</div>
+			<div class = "styled-select blue rounded">
+				<select name="never_feed" id="myselect" multiple="multiple" size="5">
+					<option value="Aoudad">Aoudad</option>
+					<option value="Whitetail Deer">Whitetail Deer</option>
+					<option value="Hogs">Hogs</option>
+					<option value="Raccoon">Raccoon</option>
+					<option value="Black Bear">Black Bear</option>
+				</select>
+			</div>
+			<button class="submit" type="submit" form="form1" value="Submit">Submit</button>
+		</form>
+	</body>
+</html>

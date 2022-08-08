@@ -1,0 +1,114 @@
+.button{
+    background-color: #6b8e23;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.message{
+	color: #FF6600;
+        text-align: center;
+	font-size: 16px;
+}
+
+.heading{
+	padding-top: 20px;	
+	font: 24px arial, sans-serif;
+	text-align: center;
+	color: #808080;
+}
+
+hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #D3D3D3;
+}
+
+body {
+	color: #000000;
+	font: 16px arial, sans-serif;
+	text-align: center;
+}
+
+
+/* -------------------- Page Styles (not required) */
+div { margin: 20px; }
+
+button.submit, a.submit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+form#form2 input[type="text"], form#form3 input[type="number"] {
+    padding: 10px;
+    border: solid 1px gainsboro;
+    -webkit-transition: box-shadow 0.3s, border 0.3s;
+    -moz-transition: box-shadow 0.3s, border 0.3s;
+    -o-transition: box-shadow 0.3s, border 0.3s;
+    transition: box-shadow 0.3s, border 0.3s;
+    display: block;
+    margin: 0;
+    width: 200px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    border-radius: none;
+}
+form#form2 input[type="text"]:focus, form#form2 input[type="text"].focus,
+form#form3 input[type="number"]:focus, form#form3 input[type="number"].focus {
+    border: solid 1px #707070;
+    -webkit-box-shadow: 0 0 5px 1px #969696;
+    -moz-box-shadow: 0 0 5px 1px #969696;
+    box-shadow: 0 0 5px 1px #969696;
+}
+form#form3 input[type="number"] {
+  text-align: right;
+}
+
+div.recent_div {
+    margin-top: 2%;
+}
+div.recent_title {
+    font-size: 20px;
+}
+table th {
+    background-color: #D5D5D5;
+}
+table tbody tr{
+    background-color: #EB2620;
+}
+table tbody tr:first-child{
+    background-color: #68D643;
+}
+table thead tr th {
+    border-bottom: 1px solid black;
+}
+table thead tr th:first-child {
+    background-color: #929292;
+}
+table tbody tr td:first-child {
+    border-right: 1px solid black;
+}

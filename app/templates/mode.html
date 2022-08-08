@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>		
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>	
+		<form action="/demomode/" method="post">
+    		<button class="button" name="demomode" type="submit">Demo Mode</button>
+		</form>
+		<form action="/standardmode/" method="post">
+    		<button class="button" name="standardmode" type="submit">Standard Mode</button>
+		</form>
+		<form action="/demoshock/" method="post">
+                <button class="button" name="demoshock" type="submit">Demo Mode with Shocker</button>
+                </form>
+                <form action="/standardshock/" method="post">
+                <button class="button" name="standardshock" type="submit">Standard Mode with Shocker</button>
+                </form>
+
+	
+	</body>
+</html>

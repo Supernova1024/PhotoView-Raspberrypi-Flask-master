@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+		<title>Control Panel</title>
+		<img src="{{ url_for('static', filename='logo.png') }}" style="width:200px;height:78px;"> 
+</head>
+	<body>
+		<div class="heading">Control Panel</div>
+		<hr>
+		<br>
+		<div class="message">{{ message }}</div>
+		<form action="/define_name/" method="POST" id="form2" style="text-align: -webkit-center">
+			<input type="text" name="name" placeholder="Your Wifi Name">
+			<br/>
+			<button class="submit" type="submit" form="form2" value="Submit">Submit</button>
+		</form>
+	</body>
+</html>
